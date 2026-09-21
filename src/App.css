@@ -1,0 +1,935 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  overflow-x: hidden;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  background: #f3e2d0;
+
+  color: #2b160c;
+}
+
+
+/* =====================================
+   PAGE
+===================================== */
+
+.cookie-page {
+  width: 100%;
+
+  overflow: hidden;
+}
+
+
+/* =====================================
+   HERO
+===================================== */
+
+.cookie-hero {
+  position: relative;
+
+  width: 100%;
+
+  height: 100vh;
+
+  min-height: 700px;
+
+  overflow: hidden;
+
+  background: #ead4bc;
+}
+
+
+/* =====================================
+   BACKGROUND
+===================================== */
+
+.hero-background {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 0;
+
+  background-image:
+    url("/bakery-bg.jpg");
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+}
+
+
+/* =====================================
+   OVERLAY
+===================================== */
+
+.hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(250, 238, 222, 0.78),
+      rgba(250, 238, 222, 0.42),
+      rgba(250, 238, 222, 0.58)
+    );
+}
+
+
+/* =====================================
+   TOP LABEL
+===================================== */
+
+.top-label {
+  position: absolute;
+
+  top: 28px;
+
+  left: 50%;
+
+  transform:
+    translateX(-50%);
+
+  z-index: 10;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+}
+
+.top-label span {
+  width: 34px;
+
+  height: 1px;
+
+  background: #77452d;
+}
+
+.top-label p {
+  margin: 0;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 4px;
+
+  color: #703b20;
+
+  white-space: nowrap;
+}
+
+
+/* =====================================
+   TITLE
+===================================== */
+
+.cookie-title {
+  position: absolute;
+
+  top: 90px;
+
+  left: 50%;
+
+  transform:
+    translateX(-50%);
+
+  z-index: 8;
+
+  margin: 0;
+
+  font-size:
+    clamp(
+      90px,
+      12vw,
+      165px
+    );
+
+  line-height: 0.85;
+
+  font-weight: 900;
+
+  letter-spacing: -7px;
+
+  color: #281309;
+
+  white-space: nowrap;
+}
+
+
+/* =====================================
+   O LETTER
+===================================== */
+
+.o-letter {
+  display: inline-block;
+
+  width: 0.72em;
+}
+
+
+/* =====================================
+   UNDER TITLE
+===================================== */
+
+.under-title {
+  position: absolute;
+
+  top: 255px;
+
+  left: 50%;
+
+  transform:
+    translateX(-50%);
+
+  z-index: 10;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 4px;
+
+  color: #86492b;
+}
+
+.under-title b {
+  font-size: 12px;
+
+  color: #a96645;
+}
+
+
+/* =====================================
+   INTRO
+===================================== */
+
+.intro {
+  position: absolute;
+
+  top: 39%;
+
+  left: 7%;
+
+  z-index: 10;
+
+  width: 330px;
+}
+
+.collection {
+  margin-bottom: 15px;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  color: #99512d;
+}
+
+.intro h2 {
+  margin: 0 0 20px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 54px;
+
+  line-height: 0.92;
+
+  font-weight: 400;
+
+  letter-spacing: -2px;
+
+  color: #35190d;
+}
+
+.description {
+  width: 285px;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+
+  color: #62432f;
+}
+
+.small-line {
+  width: 55px;
+
+  height: 2px;
+
+  margin-top: 20px;
+
+  background: #914c2b;
+}
+
+
+/* =====================================
+   COOKIE ROW
+===================================== */
+
+.cookie-row {
+  position: absolute;
+
+  left: 50%;
+
+  bottom: 48px;
+
+  transform:
+    translateX(-50%);
+
+  z-index: 8;
+
+  width: 62vw;
+
+  max-width: 850px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 40px;
+}
+
+
+/* =====================================
+   COOKIE CARD
+===================================== */
+
+.cookie-card {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+}
+
+
+/* =====================================
+   NUMBER
+===================================== */
+
+.number {
+  margin-bottom: 2px;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  color: #955c3c;
+}
+
+
+/* =====================================
+   COOKIE SPACE
+===================================== */
+
+.cookie-space {
+  width: 170px;
+
+  height: 170px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+/* =====================================
+   COOKIE IMAGE
+===================================== */
+
+.cookie-space img {
+  width: 165px;
+
+  height: 165px;
+
+  object-fit: contain;
+
+  display: block;
+
+  filter:
+    drop-shadow(
+      0 10px 10px
+      rgba(50, 25, 10, 0.25)
+    );
+
+  transition:
+    transform 0.35s ease;
+}
+
+
+/* =====================================
+   HOVER
+===================================== */
+
+.cookie-card:hover
+.cookie-space img {
+  transform:
+    translateY(-8px)
+    rotate(3deg);
+}
+
+
+/* =====================================
+   CENTER
+===================================== */
+
+.center-space {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+/* =====================================
+   CENTER GUIDE
+===================================== */
+
+.empty-space {
+  width: 125px;
+
+  height: 125px;
+
+  border: 1px dashed
+    rgba(120, 68, 39, 0.30);
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.12);
+}
+
+.empty-space::after {
+  content: "";
+
+  position: absolute;
+
+  width: 75px;
+
+  height: 75px;
+
+  border: 1px solid
+    rgba(120, 68, 39, 0.12);
+
+  border-radius: 50%;
+}
+
+
+/* =====================================
+   COOKIE INFO
+===================================== */
+
+.cookie-info {
+  margin-top: 2px;
+
+  position: relative;
+
+  z-index: 20;
+}
+
+.cookie-info h3 {
+  margin: 0 0 5px;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  color: #32170c;
+}
+
+.cookie-info p {
+  margin: 0;
+
+  font-size: 9px;
+
+  color: #76533e;
+}
+
+
+/* =====================================
+   MOVING COOKIE
+===================================== */
+
+.moving-cookie {
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 165px;
+
+  height: 165px;
+
+  z-index: 50;
+
+  object-fit: contain;
+
+  pointer-events: none;
+
+  will-change: transform;
+
+  filter:
+    drop-shadow(
+      0 10px 10px
+      rgba(50, 25, 10, 0.28)
+    );
+}
+
+
+/* =====================================
+   SCROLL
+===================================== */
+
+.scroll {
+  position: absolute;
+
+  top: 43%;
+
+  right: 5%;
+
+  z-index: 12;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.scroll-line {
+  width: 1px;
+
+  height: 60px;
+
+  background: #6d4028;
+}
+
+.scroll span {
+  font-size: 8px;
+
+  letter-spacing: 2px;
+
+  color: #87563a;
+}
+
+.scroll p {
+  margin: 0;
+
+  writing-mode:
+    vertical-rl;
+
+  font-size: 8px;
+
+  letter-spacing: 3px;
+
+  color: #74513d;
+}
+
+
+/* =====================================
+   BOTTOM
+===================================== */
+
+.bottom {
+  position: absolute;
+
+  left: 7%;
+
+  right: 7%;
+
+  bottom: 18px;
+
+  z-index: 12;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+}
+
+.bottom > div:first-child {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.bottom span {
+  font-size: 7px;
+
+  letter-spacing: 3px;
+
+  color: #87634e;
+}
+
+.bottom strong {
+  font-size: 10px;
+
+  letter-spacing: 3px;
+
+  color: #5d321e;
+}
+
+.bottom-right {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  color: #79543f;
+}
+
+.bottom-right b {
+  font-size: 13px;
+
+  color: #9c5731;
+}
+
+
+/* =====================================
+   NEXT SECTION
+===================================== */
+
+.next-section {
+  min-height: 400px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  background: #2c170d;
+
+  color: #f7eadc;
+}
+
+.next-section p {
+  margin-bottom: 20px;
+
+  font-size: 9px;
+
+  letter-spacing: 4px;
+
+  color: #bd8966;
+}
+
+.next-section h2 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 55px;
+
+  font-weight: 400;
+
+  font-style: italic;
+}
+
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 1000px) {
+
+  .cookie-row {
+    width: 72vw;
+
+    gap: 10px;
+  }
+
+  .cookie-space {
+    width: 145px;
+
+    height: 145px;
+  }
+
+  .cookie-space img {
+    width: 140px;
+
+    height: 140px;
+  }
+
+  .moving-cookie {
+    width: 140px;
+
+    height: 140px;
+  }
+
+  .intro {
+    left: 4%;
+
+    width: 280px;
+  }
+
+  .intro h2 {
+    font-size: 46px;
+  }
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 600px) {
+
+  .cookie-hero {
+    min-height: 720px;
+  }
+
+  .hero-background {
+    background-position:
+      center center;
+
+    transform:
+      scale(1.08);
+  }
+
+  .hero-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(250,239,224,0.88),
+        rgba(250,239,224,0.74)
+      );
+  }
+
+
+  .top-label {
+    top: 22px;
+
+    gap: 8px;
+  }
+
+  .top-label span {
+    width: 18px;
+  }
+
+  .top-label p {
+    font-size: 7px;
+
+    letter-spacing: 2px;
+  }
+
+
+  .cookie-title {
+    top: 65px;
+
+    font-size: 58px;
+
+    letter-spacing: -4px;
+  }
+
+
+  .under-title {
+    top: 140px;
+
+    font-size: 6px;
+
+    letter-spacing: 2px;
+  }
+
+
+  .intro {
+    top: 180px;
+
+    left: 50%;
+
+    transform:
+      translateX(-50%);
+
+    width: 290px;
+
+    text-align: center;
+  }
+
+  .collection {
+    font-size: 7px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+  }
+
+  .intro h2 {
+    font-size: 36px;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 12px;
+  }
+
+  .description {
+    width: 255px;
+
+    margin: auto;
+
+    font-size: 9px;
+  }
+
+  .small-line {
+    margin: 14px auto 0;
+  }
+
+
+  .cookie-row {
+    bottom: 58px;
+
+    width: 96vw;
+
+    gap: 0;
+  }
+
+
+  .cookie-space {
+    width: 95px;
+
+    height: 95px;
+  }
+
+  .cookie-space img {
+    width: 92px;
+
+    height: 92px;
+  }
+
+  .moving-cookie {
+    width: 92px;
+
+    height: 92px;
+  }
+
+
+  .empty-space {
+    width: 78px;
+
+    height: 78px;
+  }
+
+  .empty-space::after {
+    width: 48px;
+
+    height: 48px;
+  }
+
+
+  .number {
+    font-size: 6px;
+
+    letter-spacing: 2px;
+  }
+
+  .cookie-info h3 {
+    font-size: 7px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .cookie-info p {
+    font-size: 6px;
+  }
+
+
+  .scroll {
+    display: none;
+  }
+
+
+  .bottom {
+    left: 5%;
+
+    right: 5%;
+
+    bottom: 15px;
+  }
+
+  .bottom span {
+    font-size: 6px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .bottom strong {
+    font-size: 7px;
+
+    letter-spacing: 2px;
+  }
+
+  .bottom-right {
+    font-size: 6px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .next-section h2 {
+    font-size: 35px;
+  }
+}
